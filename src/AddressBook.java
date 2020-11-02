@@ -1,3 +1,4 @@
+// 화학전공 2017111701 최유리
 // 연락처 프로젝트 - 주소록 클래스
 import java.io.*;
 import java.util.*;
@@ -8,11 +9,12 @@ public class AddressBook
 	ObjectInputStream in = null;
 	ArrayList<Person> list; // ArrayList 객체 선언
 	private int find = 0; // 찾은 사람의 수(같은 이름을 가진 사람들이 있을 경우 2 이상)
-	private int index = -1; // 배열의 인덱스
+	private int index = 0; // 배열의 인덱스
 
-	public AddressBook(int num) throws Exception {//UI에서 생성할 사람의 수 가져와서 객체 생성
-		list = new ArrayList<Person>(num);
-	}
+	/*
+	 * public AddressBook(int num) throws Exception {//UI에서 생성할 사람의 수 가져와서 객체 생성
+	 * list = new ArrayList<Person>(num); }
+	 */
 	
 	public AddressBook(int num, ObjectInputStream in) throws Exception // 생성자 함수
 	{
@@ -164,6 +166,7 @@ public class AddressBook
 	
 	public void readFile(ObjectInputStream in) throws Exception
 	{
+
 		int count = in.readInt(); // 저장된 갯수 읽기
 		Person p; // Person 객체 생성
 

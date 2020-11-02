@@ -1,5 +1,8 @@
+// 화학전공 2017111701 최유리
 // 연락처 프로젝트-UI클래스
 
+// 해당 UI 클래스 부분은 GUI 클래스의 코드르 작성하고 테스트하는데 이용할 용도로 남겨두었습니다.
+/*
 import java.util.*;
 import java.io.*;
 
@@ -23,39 +26,21 @@ public class UI {
 			ab.readFile(in);
 			in.close(); // in 닫기
 		}
-		catch(FileNotFoundException fnfe) // 파일을 찾지 못한 경우
+		catch (FileNotFoundException fnfe) 
 		{
-			System.out.println("파일이 존재하지 않습니다.");
+			System.out.println("File not Found... First Time Start......");
 			ab = new AddressBook(100);
 		}
-		catch(EOFException eofe) // 읽을 데이터가 없는 경우
+		catch(Exception e)
 		{
-			System.out.println("끝");
 		}
-		catch(IOException ioe) // 파일을 읽을 수 없는 경우
-		{
-			System.out.println("파일을 읽을 수 없습니다.");
-		}
-		catch(ClassNotFoundException cnfe)
-		{
-			System.out.println("해당 클래스가 존재하지 않습니다.");
-		}
-		finally
-		{
-			try
-			{
-				in.close(); // 파일 닫기
-			}
-			catch(Exception e)
-			{
-			}
-		}
+	
 		
 		while(true) // 반복문
 		{
 			// 사용자 메뉴 출력
 			System.out.println("");
-			System.out.println("--------------------------*********연락처 관리 프로그램*********------------------------");
+			System.out.println("-----------------------*********연락처 관리 프로그램*********------------------------");
 			System.out.println("1. 새 연락처 추가");
 			System.out.println("2. 연락처 검색");
 			System.out.println("3. 전체 연락처 조회");
@@ -63,7 +48,7 @@ public class UI {
 			System.out.println("5. 연락처 삭제");
 			System.out.println("6. 연락처 파일 저장");
 			System.out.println("7. 프로그램 종료");
-			System.out.println("----------------------------------------------------------------------------------");
+			System.out.println("---------------------------------------------------------------------------");
 			System.out.print("원하시는 번호를 입력해주세요: ");
 			
 			try
@@ -168,8 +153,7 @@ public class UI {
 					for ( int i = 0; i < ab.getFind(); i++) // 찾은 사람 수만큼 연락처 찾아서 출력
 					{
 						int index = ab.searchName(n); // 해당 이름 찾기 및 인덱스 받기
-						// 해당 이름이 있는 인덱스에서 +1로 바꾸기 => 바꾼 인덱스부터 저장된 사람수의 범위에서 해당 이름 검색 가능
-						ab.setIndex(index+1);
+						ab.setIndex(index+1);// 해당 이름이 있는 인덱스에서 +1로 바꾸기 => 바꾼 인덱스부터 저장된 사람수의 범위에서 해당 이름 검색 가능
 						System.out.println("번호: " + index + ab.list.get(index)); // 검색 결과 출력
 					}
 					
@@ -313,4 +297,4 @@ public class UI {
 		}
 		scan.close(); // 스캐너 클래스 닫기
 	}
-}
+}*/
